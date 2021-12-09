@@ -1,0 +1,24 @@
+<h1>MADLIBS</h1>
+<button id="begin" (click)="getMadLib()" *ngIf="!title">Get Mad Lib</button>
+<form class="responses-form" *ngIf="blanks.length > 0 && !ready" #responsesForm="ngForm" (submit)="onSubmit()">
+    <div *ngFor="let blank of blanks; let i = index">
+        <div class="form-line">
+            <label for={{i}}>{{blank}}</label>
+            <input name={{i}} [(ngModel)]="responseArr[i]" type="text" minlength="4" required>
+        </div>
+    </div>
+    <button type="submit" [disabled]="!responsesForm.valid">Generate Story</button>
+</form>
+<div id="story-container">
+    <div id="story" *ngIf="ready">
+        <h2>{{title}}</h2>
+        <h3>By You</h3>
+        <div>
+            <p>{{story}}</p>
+        </div>
+    </div>
+</div>
+<div id="end">
+    <button *ngIf="story" (click)="reset()">Start new story</button>
+</div>
+

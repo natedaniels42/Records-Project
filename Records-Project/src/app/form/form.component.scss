@@ -1,0 +1,75 @@
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 54px;
+}
+
+#begin {
+   padding: 20px;
+}
+
+button {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px lightgray, inset -5px -5px 5px lightgray;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: inset 5px 5px 5px lightgray;
+}
+
+button:hover {
+    opacity: .5;
+}
+
+button, input {
+    letter-spacing: .1rem;
+}
+
+form {
+    padding: 20px;
+    border: 5px solid grey;
+    width: 70%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px lightgray, -5px -5px 5px lightgray;
+    background-color: rgb(183, 219, 241);
+}
+
+input {
+    width: 50%;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+.form-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.responses-form input.ng-invalid.ng-dirty {
+    border: 5px solid rgb(228, 122, 122);
+}
+
+.responses-form input.ng-dirty {
+    border: 5px solid rgb(162, 247, 162);
+}
+
+#story {
+    width: 50%;
+    margin: 20px auto;
+    background-color: antiquewhite;
+    padding: 40px;
+    box-shadow: 10px 15px 5px lightgrey;
+
+}
+
+#end {
+    margin-bottom: 40px;
+    margin: auto;
+}
